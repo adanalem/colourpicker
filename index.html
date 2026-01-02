@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>Colour Changer</title>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen bg-[linear-gradient(to_right,#783f3f,#0000ff)]">
+
+    
+    <div id="gradientDiv" class="w-full max-w-md h-60 rounded-lg shadow-lg border border-black border-[10px] flex items-center justify-center mb-4"
+         style="background: linear-gradient(to right, #ff0000, #0000ff);">
+        <p class="text-white font-bold text-xl">Gradient Preview</p>
+    </div>
+
+
+    <p id="currentColors" class="mb-2 font-bold text-white">#ff0000 → #0000ff</p>
+
+    
+    <div class="flex gap-4 mb-4">
+        <input type="color" id="colour1" value="#ff0000" class="h-12 w-24 rounded border hover:scale-105 transition-transform">
+        <input type="color" id="colour2" value="#0000ff" class="h-12 w-24 rounded border hover:scale-105 transition-transform">
+    </div>
+
+
+    <div class="flex gap-4 mb-6">
+        <button onclick="resetGradient()"
+            class="rounded-full p-3 border border-black bg-gray-800 text-white font-bold hover:bg-gray-700 hover:scale-105 transition-transform">
+            Reset Gradient
+        </button>
+        <button onclick="copyCSSGradient()"
+            class="rounded-full p-3 border border-black bg-green-500 text-white font-bold hover:bg-green-600 hover:scale-105 transition-transform">
+            Copy CSS Gradient
+        </button>
+        <button onclick="copyTailwindGradient()"
+            class="rounded-full p-3 border border-black bg-white text-black font-bold hover:bg-blue-600 hover:scale-105 transition-transform">
+            Copy Tailwind Gradient
+        </button>
+    </div>
+
+    
+    <script src="app.js"></script>
+</body>
+</html>
